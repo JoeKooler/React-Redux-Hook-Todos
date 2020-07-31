@@ -11,8 +11,11 @@ const deleteTodo = (todos, todoID) => {
 };
 
 const editTodo = (todos, { todoContent, todoID }) => {
-  todos[todoID].content = todoContent;
-  console.log("new " + todos[todoID].content);
+  todos.forEach((todo) => {
+    if (todo.id === todoID) {
+      todo.content = todoContent;
+    }
+  });
   return [...todos];
 };
 
