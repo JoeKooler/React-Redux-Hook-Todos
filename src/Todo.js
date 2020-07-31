@@ -32,7 +32,7 @@ export default function Todo() {
   return (
     <div className="TodosContainer">
       <form onSubmit={onSubmit} className="TodosForm">
-        <label htmlFor="newTodo">
+        <label htmlFor="newTodo" style={{ color: "white" }}>
           New Todo:
           <input
             name="newTodo"
@@ -42,7 +42,12 @@ export default function Todo() {
             type="text"
             className="TodoInput"
             placeholder="Enter New Todo here"
-            style={{ marginLeft: "1em", marginRight: "1em" }}
+            style={{
+              color: "white",
+              marginLeft: "1em",
+              marginRight: "1em",
+              borderColor: "white",
+            }}
           />
         </label>
         <button className="SubmitButton TheButton">ADD</button>

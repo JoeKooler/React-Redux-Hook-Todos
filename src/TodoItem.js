@@ -47,12 +47,17 @@ function TodoItem({ todo }) {
         onMouseLeave={hidePencil}
       >
         <div className="TodoText">{todo.content}</div>
-        <i className={pencilClassName} onClick={showEditPanel}></i>{" "}
+        <i
+          className={pencilClassName}
+          onClick={showEditPanel}
+          style={{ color: "white" }}
+        ></i>
         <form>
           <input
             className={editPanelClassName}
             value={editTodoValue}
             onChange={setTodoHook}
+            style={{ color: "white" }}
           ></input>
         </form>
       </div>
